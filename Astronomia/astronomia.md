@@ -70,6 +70,6 @@ Foi principalmente um período de desenvolvimento importante para a ciência ast
 <li>Propôs um modelo héliocêntrico do universo, colocando o Sol, não a Terra no centro.
 </ul>
 
->Suas ideias não foram aceitas na época
+>Suas ideias não foram aceitas na época.
 
 # 
