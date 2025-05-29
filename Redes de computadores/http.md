@@ -122,5 +122,5 @@ O protocolo HTTP é a base da comunicação na Web. Apesar de ser simples, ele �
 
 ## Nota Final
 
-> Material pego do repositório de Redes do meu amigo <a href="">@diegooilv</a>
+> Material pego do repositório de Redes do meu amigo <a href="https://github.com/mercuriohg/IFRS2025/tree/main/cn">@diegooilv</a>.
 
