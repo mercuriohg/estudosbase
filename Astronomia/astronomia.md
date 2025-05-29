@@ -97,7 +97,7 @@ Durante a Idade Média, a Astronomia floresceu tanto no mundo islâmico quanto n
 
 ---
 
-## Giordano Bruno (1548 d.C a 1600 d.C)
+## 📚 Giordano Bruno (1548 d.C a 1600 d.C)
 
 - A principal teoria defendida por Giordano Bruno era o heliocentrismo;
 
