@@ -44,9 +44,11 @@ Para converter entre objetos JavaScript e strings JSON.
 
 ## ✅ Métodos:
 
-JSON.stringify(obj) — converte objeto em JSON.
-
-JSON.parse(jsonStr) — converte JSON em objeto.
+<ul>
+  <li>JSON.stringify(obj) — converte objeto em JSON.
+  
+  <li>JSON.parse(jsonStr) — converte JSON em objeto.
+</ul>
 
 Requisição que faz: Serializa ou desserializa dados.
 
@@ -61,21 +63,23 @@ Para armazenar e manipular coleções ordenadas.
 
 ## ✅ Métodos:
 
-push(item) — adiciona no final.
-
-pop() — remove do final.
-
-shift() — remove do início.
-
-unshift(item) — adiciona no início.
-
-map(fn) — cria novo array transformado.
-
-filter(fn) — filtra elementos.
-
-reduce(fn, acc) — reduz a um valor.
-
-forEach(fn) — itera sobre os elementos.
+<ul>
+ <li> push(item) — adiciona no final.
+  
+  <li>pop() — remove do final.
+  
+<li> shift() — remove do início.
+  
+ <li> unshift(item) — adiciona no início.
+  
+ <li> map(fn) — cria novo array transformado.
+  
+ <li> filter(fn) — filtra elementos.
+  
+ <li> reduce(fn, acc) — reduz a um valor.
+  
+ <li> forEach(fn) — itera sobre os elementos.
+</ul>
 
 Requisição que faz: Manipula sequências de dados.
 
@@ -91,19 +95,21 @@ Para manipular textos.
 
 ## ✅ Métodos:
 
-charAt(i)
-
-includes(substring)
-
-replace(old, new)
-
-split(delimiter)
-
-toUpperCase()
-
-toLowerCase()
-
-trim()
+<ul>
+  <li>charAt(i)
+  
+ <li> includes(substring)
+  
+ <li> replace(old, new)
+  
+ <li> split(delimiter)
+  
+ <li> toUpperCase()
+  
+ <li> toLowerCase()
+  
+ <li> trim()
+</ul>
 
 Requisição que faz: Processa e transforma texto.
 
@@ -118,13 +124,15 @@ Para operações numéricas.
 
 ## ✅ Métodos:
 
-toFixed(n) — formata número com n casas decimais.
-
-toString() — converte em string.
-
-parseFloat(), parseInt() — conversão.
-
-Requisição que faz: Formata ou converte números.
+<ul>
+ <li> toFixed(n) — formata número com n casas decimais.
+  
+  <li>toString() — converte em string.
+  
+  <li>parseFloat(), parseInt() — conversão.
+  
+ <li> Requisição que faz: Formata ou converte números.
+</ul>
 
 ```javascript
 const n = 10.678;
@@ -137,21 +145,23 @@ Para trabalhar com operações assíncronas.
 
 ## ✅ Métodos:
 
-then(fn) — encadeia sucesso.
-
-catch(fn) — trata erro.
-
-finally(fn) — sempre executa.
-
-Promise.resolve(val)
-
-Promise.reject(err)
-
-Promise.all([...])
-
-Promise.race([...])
-
-Requisição que faz: Gerencia processos assíncronos, como requisições HTTP.
+<ul>
+  <li>then(fn) — encadeia sucesso.
+  
+ <li> catch(fn) — trata erro.
+  
+ <li> finally(fn) — sempre executa.
+  
+ <li> Promise.resolve(val)
+  
+ <li> Promise.reject(err)
+  
+ <li> Promise.all([...])
+  
+ <li> Promise.race([...])
+  
+ <li> Requisição que faz: Gerencia processos assíncronos, como requisições HTTP.
+</ul>
 
 ```javascript
 fetch("https://jsonplaceholder.typicode.com/posts/1")
@@ -165,13 +175,15 @@ API moderna para fazer requisições HTTP.
 
 ## ✅ Métodos:
 
-fetch(url, options) — retorna uma Promise.
-
-.then(res => res.json()) — para obter JSON.
-
-.catch() — para erros.
-
-Requisição que faz: Comunicação com servidores.
+<ul>
+  <li>fetch(url, options) — retorna uma Promise.
+  
+  <li>.then(res => res.json()) — para obter JSON.
+  
+  <li>.catch() — para erros.
+  
+  <li>Requisição que faz: Comunicação com servidores.
+</ul>
 
 ```javascript
 fetch("https://api.example.com/data")
@@ -185,15 +197,17 @@ Para armazenar valores únicos.
 
 ## ✅ Métodos:
 
-add(valor)
-
-has(valor)
-
-delete(valor)
-
-clear()
-
-Requisição que faz: Garante coleção sem duplicatas.
+<ul>
+ <li> add(valor)
+  
+ <li> has(valor)
+  
+ <li> delete(valor)
+  
+ <li> clear()
+  
+ <li> Requisição que faz: Garante coleção sem duplicatas.
+</ul>
 
 ```javascript
 const set = new Set([1, 2, 2, 3]);
@@ -206,17 +220,19 @@ Para chave/valor com qualquer tipo de chave.
 
 ## ✅ Métodos:
 
-set(chave, valor)
-
-get(chave)
-
-has(chave)
-
-delete(chave)
-
-clear()
-
-Requisição que faz: Estrutura de dados chave/valor.
+<ul>
+  <li>set(chave, valor)
+  
+  <li>get(chave)
+  
+ <li> has(chave)
+  
+  <li>delete(chave)
+  
+ <li> clear()
+  
+ <li> Requisição que faz: Estrutura de dados chave/valor.
+</ul>
 
 ```javascript
 const map = new Map();
@@ -230,11 +246,13 @@ Para expressões regulares.
 
 ## ✅ Métodos:
 
-test(str) — verifica se corresponde.
-
-exec(str) — executa e retorna detalhes.
-
-Requisição que faz: Busca e validação de padrões em strings.
+<ul>
+  <li>test(str) — verifica se corresponde.
+  
+  <li>exec(str) — executa e retorna detalhes.
+  
+ <li> Requisição que faz: Busca e validação de padrões em strings.
+</ul>
 
 ```javascript
 const regex = /abc/;
@@ -247,15 +265,17 @@ Para criar e manipular erros.
 
 ## ✅ Métodos:
 
-new Error(message)
-
-.message — descrição.
-
-.name — tipo.
-
-.stack — rastreamento.
-
-Requisição que faz: Geração e tratamento de erros.
+<ul>
+  <li>new Error(message)
+  
+ <li> .message — descrição.
+  
+ <li> .name — tipo.
+  
+ <li> .stack — rastreamento.
+  
+ <li> Requisição que faz: Geração e tratamento de erros.
+</ul>
 
 ```javascript
 try {
@@ -271,11 +291,13 @@ Internacionalização (datas, números, moedas).
 
 ## ✅ Métodos:
 
-Intl.DateTimeFormat()
-
-Intl.NumberFormat()
-
-Requisição que faz: Formata dados conforme localidade.
+<ul>
+  <li>Intl.DateTimeFormat()
+  
+ <li> Intl.NumberFormat()
+  
+ <li> Requisição que faz: Formata dados conforme localidade.
+</ul>
 
 ```javascript
 const formatador = new Intl.NumberFormat("pt-BR", {
