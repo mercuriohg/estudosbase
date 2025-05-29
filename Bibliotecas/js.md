@@ -305,20 +305,22 @@ Para depuração.
 
 ## ✅ Resumo Visual
 
-Objeto Uso Principal
-Date Data e hora
-Math Cálculos matemáticos
-JSON Conversão de dados
-Array Coleção ordenada
-String Manipulação de texto
-Number Manipulação de números
-Promise Assíncrono
-fetch() Requisições HTTP
-Set Coleção única
-Map Estrutura chave/valor
-RegExp Expressões regulares
-Error Erros
-Intl Internacionalização
-console Debugging
+| Objeto    | Uso Principal          |
+| --------- | ---------------------- |
+| `Date`    | Data e hora            |
+| `Math`    | Cálculos matemáticos   |
+| `JSON`    | Conversão de dados     |
+| `Array`   | Coleção ordenada       |
+| `String`  | Manipulação de texto   |
+| `Number`  | Manipulação de números |
+| `Promise` | Assíncrono             |
+| `fetch()` | Requisições HTTP       |
+| `Set`     | Coleção única          |
+| `Map`     | Estrutura chave/valor  |
+| `RegExp`  | Expressões regulares   |
+| `Error`   | Erros                  |
+| `Intl`    | Internacionalização    |
+| `console` | Debugging              |
+
 
 > Algumas Bibliotecas em JS.
