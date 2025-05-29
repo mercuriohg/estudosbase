@@ -167,4 +167,4 @@ O DNS é um dos pilares invisíveis da Internet moderna. Sem ele, a navegação 
 
 ## Nota Final
 
-> Material pego do repositório de redes do meu amigo <a href="#">@diegooilv</a>.
+> Material pego do repositório de Redes do meu amigo <a href="#">@diegooilv</a>.
