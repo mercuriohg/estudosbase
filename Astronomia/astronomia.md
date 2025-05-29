@@ -101,7 +101,7 @@ Durante a Idade Média, a Astronomia floresceu tanto no mundo islâmico quanto n
 
 - A principal teoria defendida por Giordano Bruno era o heliocentrismo;
 
-- Morto queimado por acreditar no heliocentrismo, basicamente, morto injustamente por falar a verdade (Defendia que a Terra era o centro do Universo e que o Sol girava ao redor da Terra).
+- Morto queimado por acreditar no heliocentrismo, basicamente, morto injustamente por falar a verdade (Defendia que a Terra girava em torno do Sol, e não o contrário).
 
 ---
 
