@@ -1,40 +1,44 @@
 ## 📚 Bibliotecas JavaScript (gerais)
-✅ 1. Date
-Para manipular datas e horas.
+## ✅ 1. Date
+  Para manipular datas e horas.
 
-✅ Métodos: getFullYear(), setDate(), toISOString()...
+## ✅ Métodos: 
+
+getFullYear(), setDate(), toISOString()...
 
 Requisição que faz: Obtém ou define partes de uma data/hora, formata data.
 
-✅ 2. Math
+## ✅ 2. Math
+
 Para cálculos matemáticos.
 
-✅ Métodos:
+## ✅ Métodos:
 
-Math.random() — gera número pseudo-aleatório entre 0 e 1.
+<ul>
+  Math.random() — gera número pseudo-aleatório entre 0 e 1.
+    
+    Math.floor(x) — arredonda para baixo.
+    
+    Math.ceil(x) — arredonda para cima.
+    
+    Math.round(x) — arredonda para o inteiro mais próximo.
+    
+    Math.max(a, b, c, ...) — maior número.
+    
+    Math.min(a, b, c, ...) — menor número.
+    
+<li>Math.abs(x) — valor absoluto.</li>
+    
+<li>Requisição que faz: Calcula valores matemáticos.</li>
+</ul>
 
-Math.floor(x) — arredonda para baixo.
-
-Math.ceil(x) — arredonda para cima.
-
-Math.round(x) — arredonda para o inteiro mais próximo.
-
-Math.max(a, b, c, ...) — maior número.
-
-Math.min(a, b, c, ...) — menor número.
-
-Math.abs(x) — valor absoluto.
-
-Requisição que faz: Calcula valores matemáticos.
-
-javascript
-Copiar
-Editar
+```javascript
 console.log(Math.random());  // Ex: 0.783
-✅ 3. JSON
+```
+## ✅ 3. JSON
 Para converter entre objetos JavaScript e strings JSON.
 
-✅ Métodos:
+## ✅ Métodos:
 
 JSON.stringify(obj) — converte objeto em JSON.
 
@@ -42,15 +46,15 @@ JSON.parse(jsonStr) — converte JSON em objeto.
 
 Requisição que faz: Serializa ou desserializa dados.
 
-javascript
-Copiar
-Editar
+```javascript
 const json = JSON.stringify({ nome: "Ana" });
 const obj = JSON.parse(json);
-✅ 4. Array
+```
+
+## ✅ 4. Array
 Para armazenar e manipular coleções ordenadas.
 
-✅ Métodos:
+## ✅ Métodos:
 
 push(item) — adiciona no final.
 
@@ -70,16 +74,16 @@ forEach(fn) — itera sobre os elementos.
 
 Requisição que faz: Manipula sequências de dados.
 
-javascript
-Copiar
-Editar
+```javascript
 const arr = [1, 2, 3];
 arr.push(4);
 console.log(arr);
-✅ 5. String
+```
+
+## ✅ 5. String
 Para manipular textos.
 
-✅ Métodos:
+## ✅ Métodos:
 
 charAt(i)
 
@@ -97,15 +101,14 @@ trim()
 
 Requisição que faz: Processa e transforma texto.
 
-javascript
-Copiar
-Editar
+```javascript
 const frase = " Hello ";
 console.log(frase.trim().toUpperCase());  // "HELLO"
-✅ 6. Number
+```
+## ✅ 6. Number
 Para operações numéricas.
 
-✅ Métodos:
+## ✅ Métodos:
 
 toFixed(n) — formata número com n casas decimais.
 
@@ -115,15 +118,14 @@ parseFloat(), parseInt() — conversão.
 
 Requisição que faz: Formata ou converte números.
 
-javascript
-Copiar
-Editar
+```javascript
 const n = 10.678;
 console.log(n.toFixed(2));  // "10.68"
-✅ 7. Promise
+```
+## ✅ 7. Promise
 Para trabalhar com operações assíncronas.
 
-✅ Métodos:
+## ✅ Métodos:
 
 then(fn) — encadeia sucesso.
 
@@ -141,16 +143,15 @@ Promise.race([...])
 
 Requisição que faz: Gerencia processos assíncronos, como requisições HTTP.
 
-javascript
-Copiar
-Editar
+```javascript
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())
   .then(data => console.log(data));
-✅ 8. fetch()
+```
+## ✅ 8. fetch()
 API moderna para fazer requisições HTTP.
 
-✅ Métodos:
+## ✅ Métodos:
 
 fetch(url, options) — retorna uma Promise.
 
@@ -160,16 +161,15 @@ fetch(url, options) — retorna uma Promise.
 
 Requisição que faz: Comunicação com servidores.
 
-javascript
-Copiar
-Editar
+```javascript
 fetch('https://api.example.com/data')
   .then(response => response.json())
   .then(data => console.log(data));
-✅ 9. Set
+```
+## ✅ 9. Set
 Para armazenar valores únicos.
 
-✅ Métodos:
+## ✅ Métodos:
 
 add(valor)
 
@@ -181,15 +181,14 @@ clear()
 
 Requisição que faz: Garante coleção sem duplicatas.
 
-javascript
-Copiar
-Editar
+```javascript
 const set = new Set([1, 2, 2, 3]);
 console.log(set.has(2));  // true
-✅ 10. Map
+```
+## ✅ 10. Map
 Para chave/valor com qualquer tipo de chave.
 
-✅ Métodos:
+## ✅ Métodos:
 
 set(chave, valor)
 
@@ -203,16 +202,15 @@ clear()
 
 Requisição que faz: Estrutura de dados chave/valor.
 
-javascript
-Copiar
-Editar
+```javascript
 const map = new Map();
 map.set('chave', 'valor');
 console.log(map.get('chave'));
-✅ 11. RegExp
+```
+## ✅ 11. RegExp
 Para expressões regulares.
 
-✅ Métodos:
+## ✅ Métodos:
 
 test(str) — verifica se corresponde.
 
@@ -220,17 +218,17 @@ exec(str) — executa e retorna detalhes.
 
 Requisição que faz: Busca e validação de padrões em strings.
 
-javascript
-Copiar
-Editar
+```javascript
 const regex = /abc/;
 console.log(regex.test("abcdef"));  // true
-✅ 12. Error
+```
+## ✅ 12. Error
+
 Para criar e manipular erros.
 
-✅ Métodos:
+## ✅ Métodos:
 
-new Error(message)
+ new Error(message)
 
 .message — descrição.
 
@@ -240,18 +238,17 @@ new Error(message)
 
 Requisição que faz: Geração e tratamento de erros.
 
-javascript
-Copiar
-Editar
+```javascript
 try {
   throw new Error("Algo deu errado");
 } catch (e) {
   console.error(e.message);
 }
-✅ 13. Intl
+```
+## ✅ 13. Intl
 Internacionalização (datas, números, moedas).
 
-✅ Métodos:
+## ✅ Métodos:
 
 Intl.DateTimeFormat()
 
@@ -259,27 +256,28 @@ Intl.NumberFormat()
 
 Requisição que faz: Formata dados conforme localidade.
 
-javascript
-Copiar
-Editar
+```javascript
 const formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 console.log(formatador.format(1234.56));  // "R$ 1.234,56"
-✅ 14. console
+```
+## ✅ 14. console
 Para depuração.
 
-✅ Métodos:
+## ✅ Métodos:
 
-console.log()
+<ul>
+   <li>console.log()
+    
+   <li>console.error()
+    
+   <li>console.warn()
+    
+   <li> console.table()
+    
+   <li> Requisição que faz: Exibe informações no console.
+</ul>
 
-console.error()
-
-console.warn()
-
-console.table()
-
-Requisição que faz: Exibe informações no console.
-
-✅ Resumo Visual
+## ✅ Resumo Visual
 Objeto	Uso Principal
 Date	Data e hora
 Math	Cálculos matemáticos
