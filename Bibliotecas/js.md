@@ -1,8 +1,10 @@
 ## 📚 Bibliotecas JavaScript (gerais)
-## ✅ 1. Date
-  Para manipular datas e horas.
 
-## ✅ Métodos: 
+## ✅ 1. Date
+
+Para manipular datas e horas.
+
+## ✅ Métodos:
 
 getFullYear(), setDate(), toISOString()...
 
@@ -15,17 +17,17 @@ Para cálculos matemáticos.
 ## ✅ Métodos:
 
 <ul>
-  Math.random() — gera número pseudo-aleatório entre 0 e 1.
+  <li>Math.random() — gera número pseudo-aleatório entre 0 e 1.
+      
+  <li>Math.floor(x) — arredonda para baixo.</li>
     
-    Math.floor(x) — arredonda para baixo.
+  <li>Math.ceil(x) — arredonda para cima.</li>
     
-    Math.ceil(x) — arredonda para cima.
+  <li>Math.round(x) — arredonda para o inteiro mais próximo.</li>
+
+  <li>Math.max(a, b, c, ...) — maior número.</li>
     
-    Math.round(x) — arredonda para o inteiro mais próximo.
-    
-    Math.max(a, b, c, ...) — maior número.
-    
-    Math.min(a, b, c, ...) — menor número.
+  <li>Math.min(a, b, c, ...) — menor número.</li>
     
 <li>Math.abs(x) — valor absoluto.</li>
     
@@ -33,9 +35,11 @@ Para cálculos matemáticos.
 </ul>
 
 ```javascript
-console.log(Math.random());  // Ex: 0.783
+console.log(Math.random()); // Ex: 0.783
 ```
+
 ## ✅ 3. JSON
+
 Para converter entre objetos JavaScript e strings JSON.
 
 ## ✅ Métodos:
@@ -52,6 +56,7 @@ const obj = JSON.parse(json);
 ```
 
 ## ✅ 4. Array
+
 Para armazenar e manipular coleções ordenadas.
 
 ## ✅ Métodos:
@@ -81,6 +86,7 @@ console.log(arr);
 ```
 
 ## ✅ 5. String
+
 Para manipular textos.
 
 ## ✅ Métodos:
@@ -103,9 +109,11 @@ Requisição que faz: Processa e transforma texto.
 
 ```javascript
 const frase = " Hello ";
-console.log(frase.trim().toUpperCase());  // "HELLO"
+console.log(frase.trim().toUpperCase()); // "HELLO"
 ```
+
 ## ✅ 6. Number
+
 Para operações numéricas.
 
 ## ✅ Métodos:
@@ -120,9 +128,11 @@ Requisição que faz: Formata ou converte números.
 
 ```javascript
 const n = 10.678;
-console.log(n.toFixed(2));  // "10.68"
+console.log(n.toFixed(2)); // "10.68"
 ```
+
 ## ✅ 7. Promise
+
 Para trabalhar com operações assíncronas.
 
 ## ✅ Métodos:
@@ -144,11 +154,13 @@ Promise.race([...])
 Requisição que faz: Gerencia processos assíncronos, como requisições HTTP.
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(res => res.json())
-  .then(data => console.log(data));
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
+
 ## ✅ 8. fetch()
+
 API moderna para fazer requisições HTTP.
 
 ## ✅ Métodos:
@@ -162,11 +174,13 @@ fetch(url, options) — retorna uma Promise.
 Requisição que faz: Comunicação com servidores.
 
 ```javascript
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
+
 ## ✅ 9. Set
+
 Para armazenar valores únicos.
 
 ## ✅ Métodos:
@@ -183,9 +197,11 @@ Requisição que faz: Garante coleção sem duplicatas.
 
 ```javascript
 const set = new Set([1, 2, 2, 3]);
-console.log(set.has(2));  // true
+console.log(set.has(2)); // true
 ```
+
 ## ✅ 10. Map
+
 Para chave/valor com qualquer tipo de chave.
 
 ## ✅ Métodos:
@@ -204,10 +220,12 @@ Requisição que faz: Estrutura de dados chave/valor.
 
 ```javascript
 const map = new Map();
-map.set('chave', 'valor');
-console.log(map.get('chave'));
+map.set("chave", "valor");
+console.log(map.get("chave"));
 ```
+
 ## ✅ 11. RegExp
+
 Para expressões regulares.
 
 ## ✅ Métodos:
@@ -220,15 +238,16 @@ Requisição que faz: Busca e validação de padrões em strings.
 
 ```javascript
 const regex = /abc/;
-console.log(regex.test("abcdef"));  // true
+console.log(regex.test("abcdef")); // true
 ```
+
 ## ✅ 12. Error
 
 Para criar e manipular erros.
 
 ## ✅ Métodos:
 
- new Error(message)
+new Error(message)
 
 .message — descrição.
 
@@ -245,7 +264,9 @@ try {
   console.error(e.message);
 }
 ```
+
 ## ✅ 13. Intl
+
 Internacionalização (datas, números, moedas).
 
 ## ✅ Métodos:
@@ -257,10 +278,15 @@ Intl.NumberFormat()
 Requisição que faz: Formata dados conforme localidade.
 
 ```javascript
-const formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-console.log(formatador.format(1234.56));  // "R$ 1.234,56"
+const formatador = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
+console.log(formatador.format(1234.56)); // "R$ 1.234,56"
 ```
+
 ## ✅ 14. console
+
 Para depuração.
 
 ## ✅ Métodos:
@@ -278,20 +304,21 @@ Para depuração.
 </ul>
 
 ## ✅ Resumo Visual
-Objeto	Uso Principal
-Date	Data e hora
-Math	Cálculos matemáticos
-JSON	Conversão de dados
-Array	Coleção ordenada
-String	Manipulação de texto
-Number	Manipulação de números
-Promise	Assíncrono
-fetch()	Requisições HTTP
-Set	Coleção única
-Map	Estrutura chave/valor
-RegExp	Expressões regulares
-Error	Erros
-Intl	Internacionalização
-console	Debugging
 
->Algumas Bibliotecas em JS.
+Objeto Uso Principal
+Date Data e hora
+Math Cálculos matemáticos
+JSON Conversão de dados
+Array Coleção ordenada
+String Manipulação de texto
+Number Manipulação de números
+Promise Assíncrono
+fetch() Requisições HTTP
+Set Coleção única
+Map Estrutura chave/valor
+RegExp Expressões regulares
+Error Erros
+Intl Internacionalização
+console Debugging
+
+> Algumas Bibliotecas em JS.
