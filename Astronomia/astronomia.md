@@ -105,4 +105,4 @@ Durante a Idade Média, a Astronomia floresceu tanto no mundo islâmico quanto n
 
 ---
 
-> Continuição do encontro dia 04/06.
+> Continuição do encontro dia 05/06.
