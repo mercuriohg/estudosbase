@@ -8,9 +8,9 @@
 - **Propriedade color:** color(blue, red, etc).
 ---
   # 🖌️ Principais tipos de seletores
-- **Seletor de elemento:** Usa-se no nome de um elemento desejado. Aplica-se as regras a todos os elementos presentes no documento.
-- **Seletor de id:**  As propriedades são aplicadas no elemento que posui o id indicado.
-
+- **Seletor de Elemento:** Usa-se no nome de um elemento desejado. Aplica-se as regras a todos os elementos presentes no documento. Nome do elemento HTML;
+- **Seletor de ID:** As propriedades são aplicadas no elemento que posui o ID indicado. Símbolo ( **#** );
+- **Seletor de Classe:** Aplica as propriedades no(s) elemento(s) que possui(em) a classe especificada. Símbolo( **.** ).
 ---
 
   
