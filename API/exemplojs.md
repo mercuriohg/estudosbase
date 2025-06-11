@@ -5,7 +5,7 @@ Se você ainda não tem o Node.js instalado, faça o download aqui.
 
 Depois, crie um diretório para o seu projeto e, dentro dele, inicialize um novo projeto Node.js:
 
-```node
+```bash
 mkdir api-example
 cd api-example
 npm init -y
