@@ -17,7 +17,8 @@ Astrônomo dinamarquês conhecido por suas observações astronômicas incrivelm
 ## Johannes Kepler (1571 d.C. a 1630 d.C.)
 Formulou as três leis que descrevem o movimento planetário:
 
-- "Os plenetas se movem em órbitas elípticas ao redor do Sol, que ocupa um dos focos da elipse."
-![Elipse](img/elipsejohanneskepler.jpg)
-- "O raio que liga o planeta ao Sol varre áreas iguais em tempos iguais.
+- "Os planetas se movem em órbitas elípticas ao redor do Sol, que ocupa um dos focos da elipse."
+   ![Elipse](img/primeiraleidekepler.png)
+- "O raio que liga o planeta ao Sol varre áreas iguais em tempos iguais. (Lei das Áreas)
+   ![Elipse](img/elipsejohanneskepler.jpg)
 - T² proporcional a R³ ()
