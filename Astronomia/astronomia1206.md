@@ -1,6 +1,9 @@
 # 🌐 Breve História da Astronomia Ocidental
+---
 
-No dia 12/06, nós continuamos o assunto do encontro do dia 29/05
+No dia 12/06, nós continuamos o assunto do encontro do dia 29/05.
+
+---
 
 # 🚩 A Revolução Copernica
 
@@ -14,11 +17,13 @@ A sua principal obra, "Sobre as Revoluções dos Corpos Celestes", foi publicada
 ## ☄️ Tycho Brahe (1546 d.C. a 1601 d.C.)
 Astrônomo dinamarquês conhecido por suas observações astronômicas incrivelmente precisas das posições dos planetas e estrelas(antes dos telescópios). Seus dados foram essenciais para Johannes Kepler formular as leis do movimento planetário. Teve a teoria geo-heliocêntrica, que também é conhecida como sistema tychônico(é um modelo do sistema solar proposto por Tycho Brahe no século XVI).
 
-## Johannes Kepler (1571 d.C. a 1630 d.C.)
+## 🛰️ Johannes Kepler (1571 d.C. a 1630 d.C.)
 Formulou as três leis que descrevem o movimento planetário:
 
-- "Os planetas se movem em órbitas elípticas ao redor do Sol, que ocupa um dos focos da elipse."
-   ![Elipse](img/primeiraleidekepler.png)
-- "O raio que liga o planeta ao Sol varre áreas iguais em tempos iguais. (Lei das Áreas)
-   ![Elipse](img/elipsejohanneskepler.jpg)
-- T² proporcional a R³ ()
+- "Os planetas se movem em órbitas elípticas ao redor do Sol, que ocupa um dos focos da elipse." (Lei das ordens Elípticas)
+   ![Elipse](img/primeiraleidekepler.png)<br>
+- "O raio que liga o planeta ao Sol varre áreas iguais em tempos iguais. (Lei das Áreas) <br>
+   ![Áreas](img/elipsejohanneskepler.jpg) 
+- T² proporcional a R³. (Estabelece que o quadrado do período orbital de um planeta é diretamente proporcional ao cubo do raio médio da sua órbita.)
+
+  > Continuação no encontro do dia 26/06.
