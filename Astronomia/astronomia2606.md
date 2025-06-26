@@ -12,7 +12,7 @@ A Astronomia moderna revolucionou nossa compreensão do universo. Com o advento 
 
 Galileu Galilei foi um astrônomo, físico e matemático italiano, considerado um dos fundadores da ciência moderna. Ele é conhecido por suas contribuições à astronomia, física e filosofia natural, bem como por seu apoio à teoria heliocêntrica de Nicolau Copérnico. Entre suas invenções e descobertas, destacam-se o aprimoramento do telescópio, a descoberta das luas de Júpiter, o estudo das fases de Vênus e a formulação de leis sobre o movimento dos corpos. 
 
-## 🌟 Isaac Newton (1642 d.C. a 1727 d.C.)
+## 🍎 Isaac Newton (1642 d.C. a 1727 d.C.)
 
 - A Lei da Gravitação Universal;
 - Explicou as órbitas dos planetas e outros corpos celestes;
