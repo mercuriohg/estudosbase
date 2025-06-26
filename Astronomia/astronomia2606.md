@@ -34,3 +34,5 @@ Galileu Galilei foi um astrônomo, físico e matemático italiano, considerado u
 - Lei de Hubble estabelece que a velocidade com que uma galáxia se afasta da Terra é diretamete proporcional à sua distância;
 - O universo está em expansão;
 - Essa descoberta revolucionou a Astronomia forneceu evidências cruciais para a Teoria do Big Bang.
+
+## A Astronomia Contemporânea.
