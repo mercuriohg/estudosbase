@@ -1,7 +1,4 @@
 # 🌎 Astronomia Moderna
----
-No dia 26/06 demos continuidade ao assunto sobre Astronomia Moderna.
----
 
 A Astronomia moderna revolucionou nossa compreensão do universo. Com o advento de telescópios poderosos.
 
@@ -32,3 +29,8 @@ Galileu Galilei foi um astrônomo, físico e matemático italiano, considerado u
 - A Teoria da Relatividade Geral descreve a gravidade como a curvatura do espaço-tempo causada por massa e energia;
 - Suas ideias permitiram a previsão e descoberta de fenômenos como lentes gravitacionais e ondas gravitacionais.
 
+## 🌑 Eddin Hubble (1889 d.C. a 1955 d.C.)
+
+- Lei de Hubble estabelece que a velocidade com que uma galáxia se afasta da Terra é diretamete proporcional à sua distância;
+- O universo está em expansão;
+- Essa descoberta revolucionou a Astronomia forneceu evidências cruciais para a Teoria do Big Bang.
