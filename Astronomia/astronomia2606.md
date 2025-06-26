@@ -1,4 +1,7 @@
 # 🌎 Astronomia Moderna
+---
+No dia 26/06 demos continuidade ao assunto sobre Astronomia Moderna.
+---
 
 A Astronomia moderna revolucionou nossa compreensão do universo. Com o advento de telescópios poderosos.
 
