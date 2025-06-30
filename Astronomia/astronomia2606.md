@@ -20,8 +20,17 @@ Galileu Galilei foi um astrônomo, físico e matemático italiano, considerado u
 
 
 ### 1° Lei de Newton:
+- Lei da Inércia: Estabelece que um corpo em repouso permanece em repouso, e um corpo em movimento retilíneo uniforme permanece nesse estado, a menos que uma força externa atue sobre ele, modificando seu estado de movimento;
+
+### 2° Lei de Newton:
+- Principio Fundamental da Dinâmica: Estabelece que a força resultante que atua sobre um corpo é igual à taxa de variação do seu momento linear em relação ao tempo. Em outras palavras, a força resultante é igual à massa do corpo multiplicada pela sua aceleração, ou *F = ma*;
+
+### 3° Lei de Newton:
+- Principio da Ação e Reação: afirma que para toda ação (força) exercida sobre um corpo, existe uma reação (força) de igual magnitude e direção, mas em sentido oposto, atuando sobre um outro corpo. 
 
 ### Quem foi Isaac Newton?
+Isaac Newton foi um físico, matemático, astrônomo, alquimista, teólogo e escritor inglês, considerado um dos cientistas mais influentes de todos os tempos. Ele é famoso por suas descobertas sobre a lei da gravitação universal, as três leis do movimento e a composição da luz. 
+
 
 ## ☄️ Albert Einstein (1879 d.C. a 1955 d.C.)
  
@@ -36,3 +45,5 @@ Galileu Galilei foi um astrônomo, físico e matemático italiano, considerado u
 - Essa descoberta revolucionou a Astronomia forneceu evidências cruciais para a Teoria do Big Bang.
 
 ## A Astronomia Contemporânea.
+
+A astronomia contemporânea é marcada por avanços tecnológicos e descobertas que expandiram enormemente nossa compreensão do universo. Ela se diferencia da astronomia tradicional por sua dependência de grandes bases de dados, como o Big Data, e pelo uso de telescópios cada vez mais potentes e observações em múltiplos comprimentos de onda. 
