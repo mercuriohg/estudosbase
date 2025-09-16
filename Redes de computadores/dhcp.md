@@ -91,12 +91,5 @@ O DHCP **não possui autenticação nativa**, o que o torna vulnerável a:
 
 ---
 
-## 📚 Referências
-
-- [RFC 2131 – DHCP Specification](https://datatracker.ietf.org/doc/html/rfc2131)
-- [Cisco – DHCP Overview](https://www.cisco.com/c/en/us/tech/ios/dhcp/index.html)
-- [Wikipedia – DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
-
----
 
 > Material pego do repositório do <a href="https://github.com/mercuriohg/IFRS2025/blob/main/cn/aulas/Dhcp.md?plain=1">@diegooilv</a>
