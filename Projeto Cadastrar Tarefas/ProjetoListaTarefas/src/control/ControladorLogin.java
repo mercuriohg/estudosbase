@@ -52,7 +52,7 @@ public class ControladorLogin {
     public void login() {
         String senha = new String(jPasswordField.getPassword()); 
 
-        if(jTextFieldEmail.getText().equals("foda") && senha.equals("!234")){
+        if(jTextFieldEmail.getText().equals("oi") && senha.equals("!234")){
             abrirTelaPrincipal();
         }else{
             abrirTelaCadastro();
