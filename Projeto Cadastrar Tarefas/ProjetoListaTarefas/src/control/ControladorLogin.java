@@ -48,7 +48,7 @@ public class ControladorLogin {
         jDesktop.add(view);
         view.setVisible(true);
     }
-
+         
     public void login() {
         String senha = new String(jPasswordField.getPassword()); 
 
