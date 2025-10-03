@@ -12,6 +12,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import model.Pessoa;
@@ -35,6 +36,7 @@ public class ControladorCadastro {
     int index;
 
     public ControladorCadastro(JTextField jTextFieldNome, JTextField jTextFieldEmail, JPasswordField jPasswordFieldSenha, JDesktopPane jDesktop, JButton jButtonCadastro, JList<String> jListCadastro, int index) {
+
         this.jTextFieldNome = jTextFieldNome;
         this.jTextFieldEmail = jTextFieldEmail;
         this.jPasswordFieldSenha = jPasswordFieldSenha;
@@ -43,7 +45,6 @@ public class ControladorCadastro {
         this.jListCadastro = jListCadastro;
         this.index = index;
         carregarLista();
-        
 
     }
 
@@ -54,15 +55,21 @@ public class ControladorCadastro {
     }
 
     public void cadastrarUsuario() {
-        String nome = jTextFieldNome.getText();
-        String email = jTextFieldEmail.getText();
-        String senha = new String(jPasswordFieldSenha.getPassword());
+        String nome = jTextFieldNome.getText().trim();
+        String email = jTextFieldEmail.getText().trim();
+        String senha = new String(jPasswordFieldSenha.getPassword()).trim();
         Pessoa p = new Pessoa(nome, email, senha);
-        if (jButtonCadastro.getText().compareToIgnoreCase("Salvar") == 0) {
-            listaPessoa.add(p);
+
+        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
+            return;
         } else {
-            listaPessoa.set(index, p);
+            listaPessoa.add(p);
+            BDUsuario.adicionarUsuario(p);
+            defaultListModel.addElement(p.getNome());
+            abrirTelaPrincipal();
         }
+
         limpar();
         BDUsuario.salvar(listaPessoa);
         carregarLista();

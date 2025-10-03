@@ -19,9 +19,10 @@ import model.Pessoa;
  * @author alunos
  */
 public class BDUsuario {
-    public static final String ARQUIVO = "usuario.sv";
-    
-      public static List<Pessoa> carregar() {
+
+    public static final String ARQUIVO = "database/usuario.sv";
+
+    public static List<Pessoa> carregar() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARQUIVO))) {
             return (List<Pessoa>) ois.readObject();
         } catch (FileNotFoundException e) {
@@ -31,12 +32,33 @@ public class BDUsuario {
             return new ArrayList<>();
         }
     }
-       public static void salvar(List<Pessoa> brincadeiras) {
+
+    public static void salvar(List<Pessoa> pessoa) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ARQUIVO))) {
-            oos.writeObject(brincadeiras);
+            oos.writeObject(pessoa);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
+
+     // Adiciona um usuário no "banco"
+    public static void adicionarUsuario(Pessoa p) {
+        List<Pessoa> usuarios = carregar();
+        usuarios.add(p);
+        salvar(usuarios);
+    }
+
+    // Busca usuário pelo nome OU email + senha
+    public static Pessoa buscarUsuario(String identificador, String senha) {
+        List<Pessoa> usuarios = carregar();
+
+        for (Pessoa p : usuarios) {
+            if ((p.getNome().equalsIgnoreCase(identificador) ||
+                 p.getEmail().equalsIgnoreCase(identificador)) &&
+                 p.getSenha().equals(senha)) {
+                return p;
+            }
+        }
+        return null; // não achou
+    }
 }

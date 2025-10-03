@@ -4,21 +4,27 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alunos
  */
-public class Pessoa {   
+public class Pessoa implements Serializable {
+    public static final long serialVersionUID = 1L;
+    
     private String nome;
     private String email;
     private String senha;
 
-    public Pessoa(String nome, String email, String senha) {
+    public Pessoa( String nome, String email, String senha) {
+   
         this.nome = nome;
         this.email = email;
         this.senha = senha;
     }
-
+    
+ 
     public String getNome() {
         return nome;
     }
