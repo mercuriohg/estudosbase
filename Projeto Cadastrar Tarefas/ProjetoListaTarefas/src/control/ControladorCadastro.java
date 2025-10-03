@@ -50,7 +50,7 @@ public class ControladorCadastro {
       public void cadastrarUsuario() {
         String nome = jTextFieldNome.getText();
         String email = jTextFieldEmail.getText();
-        String senha = jPasswordFieldSenha.getText();
+        char[] senha = jPasswordFieldSenha.getPassword();
         Pessoa p = new Pessoa (nome, email, senha);
         if (jButtonCadastro.getText().compareToIgnoreCase("Salvar") == 0) {
 
