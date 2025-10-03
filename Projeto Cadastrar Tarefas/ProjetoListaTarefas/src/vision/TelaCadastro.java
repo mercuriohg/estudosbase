@@ -28,7 +28,7 @@ public class TelaCadastro extends javax.swing.JPanel {
     ControladorCadastro c;
     
     public void start(){
-        c = new ControladorCadastro(jTextFieldNome, jTextFieldEmail, jPasswordFieldSenha, jDesktopPane, jButtonCadastro, WIDTH);
+     c = new ControladorCadastro(jTextFieldNome, jTextFieldEmail, jPasswordFieldSenha, jDesktopPane, jButtonCadastro, jListCadastro, WIDTH);
     }
 
     /**
@@ -47,7 +47,7 @@ public class TelaCadastro extends javax.swing.JPanel {
         jButtonCadastro = new javax.swing.JButton();
         jPasswordFieldSenha = new javax.swing.JPasswordField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListCadastro = new javax.swing.JList<>();
         jLabel4 = new javax.swing.JLabel();
         jTextFieldNome = new javax.swing.JTextField();
 
@@ -67,9 +67,14 @@ public class TelaCadastro extends javax.swing.JPanel {
         });
 
         jButtonCadastro.setText("Cadastrar");
+        jButtonCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroActionPerformed(evt);
+            }
+        });
 
-        jList1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jScrollPane1.setViewportView(jList1);
+        jListCadastro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setViewportView(jListCadastro);
 
         jLabel4.setText("Nome:");
 
@@ -80,7 +85,7 @@ public class TelaCadastro extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(127, 127, 127)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -100,9 +105,9 @@ public class TelaCadastro extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextFieldEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
                             .addComponent(jTextFieldNome))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,13 +139,17 @@ public class TelaCadastro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmailActionPerformed
-        // TODO add your handling code here:
+// TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldEmailActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       c.abrirTelaPrincipal();
-       c.cadastrarUsuario();// TODO add your handling code here:
+       c.cadastrarUsuario();
+       c.carregarLista();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroActionPerformed
+      c.cadastrarUsuario();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCadastroActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastro;
@@ -148,7 +157,7 @@ public class TelaCadastro extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListCadastro;
     private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextFieldEmail;

@@ -10,7 +10,7 @@ public class Tarefa {
     private LocalDate dataCriacao;
     private LocalDate prazo;
     private boolean concluida;
-    private int usuarioId; // FK -> Usuário dono da tarefa
+    private int usuarioId; 
 
     public Tarefa(int id, String titulo, String descricao, LocalDate dataCriacao, LocalDate prazo, boolean concluida, int usuarioId) {
         this.id = id;

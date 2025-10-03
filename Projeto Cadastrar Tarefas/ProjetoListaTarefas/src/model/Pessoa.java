@@ -8,12 +8,12 @@ package model;
  *
  * @author alunos
  */
-public class Pessoa {
+public class Pessoa {   
     private String nome;
     private String email;
-    private char[] senha;
+    private String senha;
 
-    public Pessoa(String nome, String email, char[] senha) {
+    public Pessoa(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -35,11 +35,11 @@ public class Pessoa {
         this.email = email;
     }
 
-    public char[] getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(char[] senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
     

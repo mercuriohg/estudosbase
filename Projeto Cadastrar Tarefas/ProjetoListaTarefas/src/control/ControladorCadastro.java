@@ -4,12 +4,14 @@
  */
 package control;
 
+import db.BDUsuario;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
+import javax.swing.JList;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import model.Pessoa;
@@ -21,48 +23,54 @@ import vision.TelaDesktopPrincipal;
  * @author alunos
  */
 public class ControladorCadastro {
+
     JTextField jTextFieldNome;
     JTextField jTextFieldEmail;
     JPasswordField jPasswordFieldSenha;
     JDesktopPane jDesktop;
     JButton jButtonCadastro;
+    JList<String> jListCadastro;
     DefaultListModel defaultListModel = new DefaultListModel();
     ArrayList<Pessoa> listaPessoa = new ArrayList<>();
     int index;
 
-    public ControladorCadastro(JTextField jTextFieldNome, JTextField jTextFieldEmail, JPasswordField jPasswordFieldSenha, JDesktopPane jDesktop, JButton jButtonCadastro, int index) {
+    public ControladorCadastro(JTextField jTextFieldNome, JTextField jTextFieldEmail, JPasswordField jPasswordFieldSenha, JDesktopPane jDesktop, JButton jButtonCadastro, JList<String> jListCadastro, int index) {
         this.jTextFieldNome = jTextFieldNome;
         this.jTextFieldEmail = jTextFieldEmail;
         this.jPasswordFieldSenha = jPasswordFieldSenha;
         this.jDesktop = jDesktop;
         this.jButtonCadastro = jButtonCadastro;
+        this.jListCadastro = jListCadastro;
         this.index = index;
-        limpar();
-    }
+        carregarLista();
+        
 
-    
+    }
 
     public void limpar() {
         jTextFieldNome.setText("");
         jTextFieldEmail.setText("");
         jPasswordFieldSenha.setText("");
     }
-      public void cadastrarUsuario() {
+
+    public void cadastrarUsuario() {
         String nome = jTextFieldNome.getText();
         String email = jTextFieldEmail.getText();
-        char[] senha = jPasswordFieldSenha.getPassword();
-        Pessoa p = new Pessoa (nome, email, senha);
+        String senha = new String(jPasswordFieldSenha.getPassword());
+        Pessoa p = new Pessoa(nome, email, senha);
         if (jButtonCadastro.getText().compareToIgnoreCase("Salvar") == 0) {
-
             listaPessoa.add(p);
         } else {
             listaPessoa.set(index, p);
         }
-            limpar(); 
-            carregarLista();
-    
-}
-      public void carregarLista() {
+        limpar();
+        BDUsuario.salvar(listaPessoa);
+        carregarLista();
+
+    }
+
+    public void carregarLista() {
+        listaPessoa = (ArrayList<Pessoa>) BDUsuario.carregar();
         defaultListModel = new DefaultListModel();
         ArrayList<String> listaAtualizada = new ArrayList<>();
         for (Pessoa user : listaPessoa) {
@@ -70,6 +78,7 @@ public class ControladorCadastro {
         }
         Collections.sort(listaAtualizada);
         defaultListModel.addAll(listaAtualizada);
+        jListCadastro.setModel(defaultListModel);
     }
 
     public void abrirTelaPrincipal() {
