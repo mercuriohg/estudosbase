@@ -9,14 +9,13 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
-import model.DesktoImg;
 
 /**
  *
  * @author alunos
  */
 public class PainelPrincipal extends javax.swing.JFrame {
-    /**
+     /**
      * Creates new form PainelPrincipal
      */
     public PainelPrincipal() {
