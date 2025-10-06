@@ -63,11 +63,12 @@ public class ControladorCadastro {
         if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
             return;
-
+       
         } else if (!email.endsWith("@gmail.com")) {
             JOptionPane.showMessageDialog(null, "E-mail inválido! Digite um endereço válido.");
             return;
-        } else {
+            
+        }else {
             listaPessoa.add(p);
             BDUsuario.adicionarUsuario(p);
             defaultListModel.addElement(p.getNome());

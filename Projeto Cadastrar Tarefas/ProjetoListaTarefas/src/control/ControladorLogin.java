@@ -7,6 +7,7 @@ package control;
 import db.BDUsuario;
 import java.awt.Dimension;
 import javax.swing.JDesktopPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import model.Pessoa;
@@ -18,7 +19,6 @@ import vision.TelaDesktopPrincipal;
  * @author alunos
  */
 public class ControladorLogin {
-
     JTextField jTextFieldEmail;
     JPasswordField jPasswordField;
     JDesktopPane jDesktop;
@@ -56,15 +56,16 @@ public class ControladorLogin {
         String senha = new String(jPasswordField.getPassword()).trim();
 
         Pessoa usuario = BDUsuario.buscarUsuario(identificador, senha);
-
+   
         if (usuario != null) {
-            // Achou o usuário → abre a tela principal
+            // Se achou o usuário abre a tela principal
             abrirTelaPrincipal();
-        } else {
+           
+            // Se o email, ou nome ou a senha forem diferentes mostra para o usuário o possível erro
+        } else{
             JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos");
             return;
         }
     }
 
 }
-
