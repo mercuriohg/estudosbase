@@ -61,9 +61,10 @@ public class ControladorLogin {
             // Achou o usuário → abre a tela principal
             abrirTelaPrincipal();
         } else {
-            // Não achou → vai para cadastro
-            abrirTelaCadastro();
+            JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos");
+            return;
         }
     }
 
 }
+
