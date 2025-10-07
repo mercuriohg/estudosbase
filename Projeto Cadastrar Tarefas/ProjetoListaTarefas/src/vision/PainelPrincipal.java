@@ -57,16 +57,23 @@ public class PainelPrincipal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(221, 190, 175));
 
         jLabel1.setFont(new java.awt.Font("Palatino Linotype", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
         jLabel1.setText("Vida+Fácil");
 
+        jButton2.setBackground(new java.awt.Color(255, 161, 119));
+        jButton2.setFont(new java.awt.Font("Mongolian Baiti", 1, 14)); // NOI18N
         jButton2.setText("Cadastro");
+        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 161, 119));
+        jButton1.setFont(new java.awt.Font("Mongolian Baiti", 1, 14)); // NOI18N
         jButton1.setText("Login");
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

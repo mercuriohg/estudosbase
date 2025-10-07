@@ -60,5 +60,6 @@ public class BDUsuario {
             }
         }
         return null; // não achou
-    }
+    }   
+    
 }

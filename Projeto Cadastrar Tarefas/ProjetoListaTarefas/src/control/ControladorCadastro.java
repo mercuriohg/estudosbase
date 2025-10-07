@@ -58,22 +58,29 @@ public class ControladorCadastro {
         String nome = jTextFieldNome.getText().trim();
         String email = jTextFieldEmail.getText().trim();
         String senha = new String(jPasswordFieldSenha.getPassword()).trim();
-        Pessoa p = new Pessoa(nome, email, senha);
 
+        for (Pessoa user : listaPessoa) {
+            if (user.getEmail().equalsIgnoreCase(email)) {
+                JOptionPane.showMessageDialog(null, "Já existe um cadastro com este e-mail!");
+                return;
+            }
+        }
         if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
             return;
-       
-        } else if (!email.endsWith("@gmail.com")) {
+
+        }if (!email.endsWith("@gmail.com")) {
             JOptionPane.showMessageDialog(null, "E-mail inválido! Digite um endereço válido.");
             return;
-            
-        }else {
-            listaPessoa.add(p);
-            BDUsuario.adicionarUsuario(p);
-            defaultListModel.addElement(p.getNome());
-            abrirTelaPrincipal();
+
         }
+        
+        
+        Pessoa p = new Pessoa(nome, email, senha);
+        listaPessoa.add(p);
+        BDUsuario.adicionarUsuario(p);
+        defaultListModel.addElement(p.getNome());
+        abrirTelaPrincipal();
 
         limpar();
         BDUsuario.salvar(listaPessoa);
