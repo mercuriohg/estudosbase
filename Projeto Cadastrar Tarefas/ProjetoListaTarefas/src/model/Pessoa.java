@@ -16,12 +16,14 @@ public class Pessoa implements Serializable {
     private String nome;
     private String email;
     private String senha;
+    private String senha2;
 
-    public Pessoa( String nome, String email, String senha) {
+    public Pessoa( String nome, String email, String senha, String senha2) {
    
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.senha2 = senha2;
     }
     
  
@@ -47,6 +49,14 @@ public class Pessoa implements Serializable {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getSenha2() {
+        return senha2;
+    }
+
+    public void setSenha2(String senha2) {
+        this.senha2 = senha2;
     }
     
     

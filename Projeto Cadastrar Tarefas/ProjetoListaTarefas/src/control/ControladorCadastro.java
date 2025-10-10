@@ -28,6 +28,7 @@ public class ControladorCadastro {
     JTextField jTextFieldNome;
     JTextField jTextFieldEmail;
     JPasswordField jPasswordFieldSenha;
+    JPasswordField jPasswordSenha2;
     JDesktopPane jDesktop;
     JButton jButtonCadastro;
     JList<String> jListCadastro;
@@ -35,11 +36,12 @@ public class ControladorCadastro {
     ArrayList<Pessoa> listaPessoa = new ArrayList<>();
     int index;
 
-    public ControladorCadastro(JTextField jTextFieldNome, JTextField jTextFieldEmail, JPasswordField jPasswordFieldSenha, JDesktopPane jDesktop, JButton jButtonCadastro, JList<String> jListCadastro, int index) {
+    public ControladorCadastro(JTextField jTextFieldNome, JTextField jTextFieldEmail, JPasswordField jPasswordFieldSenha,JPasswordField jPasswordSenha2, JDesktopPane jDesktop, JButton jButtonCadastro, JList<String> jListCadastro, int index) {
 
         this.jTextFieldNome = jTextFieldNome;
         this.jTextFieldEmail = jTextFieldEmail;
         this.jPasswordFieldSenha = jPasswordFieldSenha;
+        this.jPasswordSenha2 = jPasswordSenha2;
         this.jDesktop = jDesktop;
         this.jButtonCadastro = jButtonCadastro;
         this.jListCadastro = jListCadastro;
@@ -58,6 +60,8 @@ public class ControladorCadastro {
         String nome = jTextFieldNome.getText().trim();
         String email = jTextFieldEmail.getText().trim();
         String senha = new String(jPasswordFieldSenha.getPassword()).trim();
+        String senha2 = new String(jPasswordSenha2.getPassword()).trim();
+
 
         for (Pessoa user : listaPessoa) {
             if (user.getEmail().equalsIgnoreCase(email)) {
@@ -69,14 +73,20 @@ public class ControladorCadastro {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
             return;
 
-        }if (!email.endsWith("@gmail.com")) {
+        }if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
             JOptionPane.showMessageDialog(null, "E-mail inválido! Digite um endereço válido.");
             return;
 
         }
+        if (!senha2.equals(senha)){
+            JOptionPane.showMessageDialog(null, "A senha não corresponde com o primeiro campo");
+            return;
+        }
+        else{
+            abrirTelaPrincipal();
+        }
         
-        
-        Pessoa p = new Pessoa(nome, email, senha);
+        Pessoa p = new Pessoa(nome, email, senha, senha2);
         listaPessoa.add(p);
         BDUsuario.adicionarUsuario(p);
         defaultListModel.addElement(p.getNome());
