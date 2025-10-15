@@ -54,6 +54,7 @@ public class ControladorCadastro {
         jTextFieldNome.setText("");
         jTextFieldEmail.setText("");
         jPasswordFieldSenha.setText("");
+        jPasswordSenha2.setText("");
     }
 
     public void cadastrarUsuario() {
@@ -69,7 +70,7 @@ public class ControladorCadastro {
                 return;
             }
         }
-        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || senha2.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
             return;
 

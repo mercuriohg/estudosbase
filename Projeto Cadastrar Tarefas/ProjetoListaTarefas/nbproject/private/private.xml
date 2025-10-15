@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/vision/PainelPrincipal.java</file>
             <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/control/ControladorCadastro.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/model/Pessoa.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/vision/TelaCadastro.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/db/BDUsuario.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/control/ControladorLogin.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/vision/TelaLogin.java</file>
+            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/control/ControladorTarefa.java</file>
             <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/vision/TelaDesktopPrincipal.java</file>
-            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/db/BDVidaFacil.java</file>
+            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/model/Tarefa.java</file>
+            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/control/ControladorLogin.java</file>
+            <file>file:/C:/Users/User/OneDrive/Área%20de%20Trabalho/ProjetoListaTarefas/src/vision/TelaCadastro.java</file>
         </group>
     </open-files>
 </project-private>

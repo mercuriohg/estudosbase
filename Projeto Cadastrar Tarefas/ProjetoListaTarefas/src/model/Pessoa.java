@@ -11,22 +11,24 @@ import java.io.Serializable;
  * @author alunos
  */
 public class Pessoa implements Serializable {
-    public static final long serialVersionUID = 1L;
-    
+    private static int contador = 1;
+    private int id;    
     private String nome;
     private String email;
     private String senha;
     private String senha2;
 
     public Pessoa( String nome, String email, String senha, String senha2) {
-   
+        this.id = contador++;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.senha2 = senha2;
     }
     
- 
+    public int getID(){
+        return this.id;
+    }
     public String getNome() {
         return nome;
     }

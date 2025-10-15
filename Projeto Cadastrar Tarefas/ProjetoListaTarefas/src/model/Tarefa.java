@@ -7,19 +7,19 @@ public class Tarefa {
     private int id;
     private String titulo;
     private String descricao;
-    private LocalDate dataCriacao;
-    private LocalDate prazo;
-    private boolean concluida;
-    private int usuarioId; 
+   // private LocalDate dataCriacao;
+    //private LocalDate prazo;
+    private String concluida;
+    //private int usuarioId; 
 
-    public Tarefa(int id, String titulo, String descricao, LocalDate dataCriacao, LocalDate prazo, boolean concluida, int usuarioId) {
+    public Tarefa(int id, String titulo, String descricao, /*LocalDate dataCriacao, LocalDate prazo*/ String concluida/*, int usuarioId*/) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
-        this.dataCriacao = dataCriacao;
-        this.prazo = prazo;
+        //this.dataCriacao = dataCriacao;
+        //this.prazo = prazo;
         this.concluida = concluida;
-        this.usuarioId = usuarioId;
+        //this.usuarioId = usuarioId;
     }
 
     // Getters e Setters
@@ -47,35 +47,35 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
+    //public LocalDate getDataCriacao() {
+    //    return dataCriacao;
+   // }
 
-    public void setDataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
+   // public void setDataCriacao(LocalDate dataCriacao) {
+   //     this.dataCriacao = dataCriacao;
+   // }
 
-    public LocalDate getPrazo() {
-        return prazo;
-    }
+   // public LocalDate getPrazo() {
+    //    return prazo;
+    //}
 
-    public void setPrazo(LocalDate prazo) {
-        this.prazo = prazo;
-    }
+   // public void setPrazo(LocalDate prazo) {
+      //  this.prazo = prazo;
+   // }
 
-    public boolean isConcluida() {
+    public String getConcluida() {
         return concluida;
     }
 
-    public void setConcluida(boolean concluida) {
+    public void setConcluida(String concluida) {
         this.concluida = concluida;
     }
 
-    public int getUsuarioId() {
-        return usuarioId;
-    }
+    //public int getUsuarioId() {
+      //  return usuarioId;
+    //}
 
-    public void setUsuarioId(int usuarioId) {
-        this.usuarioId = usuarioId;
-    }
+    //public void setUsuarioId(int usuarioId) {
+      //  this.usuarioId = usuarioId;
+    //}
 }
