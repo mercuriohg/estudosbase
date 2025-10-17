@@ -284,7 +284,8 @@ public class TelaDesktopPrincipal extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonCadastrarTarefaActionPerformed
 
     private void tabelaTarefaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaTarefaMouseClicked
-     controlt.editarTarefa();        // TODO add your handling code here:
+      controlt.salvarEdicaoOuExcluir();
+      controlt.editarTarefa();// TODO add your handling code here:
     }//GEN-LAST:event_tabelaTarefaMouseClicked
 
     ControladorTarefa controlt;

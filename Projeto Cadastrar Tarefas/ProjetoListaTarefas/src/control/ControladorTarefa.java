@@ -48,22 +48,62 @@ public class ControladorTarefa {
         this.jButtonCadastrarTarefa = jButtonCadastrarTarefa;
         this.tabelaTarefa = tabelaTarefa;
         this.index = index;
+        modle.setColumnIdentifiers(new Object[]{"ID", "Título", "Descrição", "Status"});
         limpar();
     }
 
     public int gerarId() {
-       int novoId = 1;
-        if(!listaTarefa.isEmpty()){
-            int indexU = listaTarefa.size()-1;
+        int novoId = 1;
+        if (!listaTarefa.isEmpty()) {
+            int indexU = listaTarefa.size() - 1;
             Tarefa c = listaTarefa.get(indexU);
-            novoId = c.getId()+1;
+            novoId = c.getId() + 1;
         }
-        return novoId; 
+        return novoId;
     }
-    
+
+    private void reorganizarIds() {
+        for (int i = 0; i < listaTarefa.size(); i++) {
+            listaTarefa.get(i).setId(i + 1);
+        }
+    }
+
+    public void salvarEdicaoOuExcluir() {
+        if (index >= 0 && index < listaTarefa.size()) {
+            Tarefa tarefa = listaTarefa.get(index);
+            String novoStatus = jComboBoxTarefa.getSelectedItem().toString();
+
+            if (!tarefa.getConcluida().equals(novoStatus)) {
+                // Se o status mudou para Concluída → remove
+                if (novoStatus.equalsIgnoreCase("Concluída")) {
+                    listaTarefa.remove(index);
+                    reorganizarIds();
+                    JOptionPane.showMessageDialog(null, "Tarefa concluída e removida com sucesso!");
+                } else {
+                    // Só atualiza o status
+                    tarefa.setConcluida(novoStatus);
+                    listaTarefa.set(index, tarefa);
+                    JOptionPane.showMessageDialog(null, "Status atualizado com sucesso!");
+                }
+
+                // Atualiza a tabela
+                carregarLista(listaTarefa);
+                limpar();
+
+                // Reabilita os campos e volta o texto do botão
+                jTextFieldTitulo.setEnabled(true);
+                jTextFieldDescricao.setEnabled(true);
+                jButtonCadastrarTarefa.setText("Cadastrar");
+            } else {
+                JOptionPane.showMessageDialog(null, "Nenhuma modificação detectada.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Nenhuma tarefa selecionada para editar!");
+        }
+    }
 
     public void limpar() {
-        jTextFieldID.setText(gerarId()+"");
+        jTextFieldID.setText(gerarId() + "");
         jTextFieldTitulo.setText("");
         jTextFieldDescricao.setText("");
         jComboBoxTarefa.setSelectedIndex(0);
@@ -81,11 +121,11 @@ public class ControladorTarefa {
     }
 
     public void carregarLista(ArrayList<Tarefa> listaAtualizada) {
-        modle.setRowCount(0);
+        DefaultTableModel model = (DefaultTableModel) tabelaTarefa.getModel();
+        model.setRowCount(0); // limpa
 
-        // Preenche novamente com os dados da lista
         for (Tarefa t : listaAtualizada) {
-            modle.addRow(new Object[]{
+            model.addRow(new Object[]{
                 t.getId(),
                 t.getTitulo(),
                 t.getDescricao(),
@@ -93,12 +133,8 @@ public class ControladorTarefa {
             });
         }
 
-        // Atualiza a tabela (caso ainda não esteja associada)
-        tabelaTarefa.setModel(modle);
-
-        // Reorganiza as colunas (opcional, melhora a usabilidade)
-        TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(modle);
-        tabelaTarefa.setRowSorter(sorter);
+        // se quiser garantir que está ordenado:
+        tabelaTarefa.setAutoCreateRowSorter(true);
     }
 
     public void cadastrarTarefa() {
@@ -108,28 +144,40 @@ public class ControladorTarefa {
             String descricao = jTextFieldDescricao.getText();
             String status = jComboBoxTarefa.getSelectedItem() + "";
 
-            // Criar objeto tarefa
-            Tarefa tarefa = new Tarefa(id, titulo, descricao, status);
-
-            // Adicionar na lista
-            listaTarefa.add(tarefa);
-
-            // Adicionar na JTable
             DefaultTableModel model = (DefaultTableModel) tabelaTarefa.getModel();
-            model.insertRow(0, new Object[]{tarefa.getId(), tarefa.getTitulo(), tarefa.getDescricao(), tarefa.getConcluida()});
 
-            //Por em ordem de id
+            if (jButtonCadastrarTarefa.getText().equals("Editar") && index != -1) {
+                // Atualiza tarefa existente
+                Tarefa tarefaEditada = listaTarefa.get(index);
+                tarefaEditada.setTitulo(titulo);
+                tarefaEditada.setDescricao(descricao);
+                tarefaEditada.setConcluida(status);
+
+                // Atualiza tabela visualmente
+                model.setValueAt(id, index, 0);
+                model.setValueAt(titulo, index, 1);
+                model.setValueAt(descricao, index, 2);
+                model.setValueAt(status, index, 3);
+
+                // Volta o botão para modo “Cadastrar”
+                jButtonCadastrarTarefa.setText("Cadastrar");
+
+                JOptionPane.showMessageDialog(null, "Tarefa atualizada com sucesso!");
+            } else {
+                // Adiciona nova tarefa
+                Tarefa tarefa = new Tarefa(id, titulo, descricao, status);
+                listaTarefa.add(tarefa);
+
+                model.addRow(new Object[]{tarefa.getId(), tarefa.getTitulo(), tarefa.getDescricao(), tarefa.getConcluida()});
+                JOptionPane.showMessageDialog(null, "Tarefa cadastrada com sucesso!");
+            }
+
+            // Reordena por ID crescente
             TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
             tabelaTarefa.setRowSorter(sorter);
-            List<RowSorter.SortKey> sortKeys = new ArrayList<>();
-            sorter.setSortKeys(sortKeys);
-            sorter.sort();
-
-            // Limpar campos
-            jTextFieldID.setText("");
-            jTextFieldTitulo.setText("");
-            jTextFieldDescricao.setText("");
-            jComboBoxTarefa.setSelectedIndex(0);
+            sorter.toggleSortOrder(0);
+            limpar();
+            carregarLista(listaTarefa);
 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "ID deve ser um número!");

@@ -92,7 +92,7 @@ public class ControladorCadastro {
         BDUsuario.adicionarUsuario(p);
         defaultListModel.addElement(p.getNome());
         abrirTelaPrincipal();
-
+        
         limpar();
         BDUsuario.salvar(listaPessoa);
         carregarLista();
